@@ -11,6 +11,7 @@ Setup Cubes
 * `pip install virtualenv`
 * `virtualenv --python=/usr/bin/python2.7 env`
 * `source env/bin/activate`
+* `pip install pip --upgrade`
 * `pip install -r bin/requirements.txt`
 
 * Install lmis production dataset to PostGres per slicer.ini
