@@ -4,6 +4,7 @@ name=$0
 echo "Execute location: $0"
 CUBES_PATH=$(dirname ${name})
 export MODELS_PATH=$CUBES_PATH/../models
+export LOGS_PATH=$CUBES_PATH/../logs/cubes.log
 export CUBES_PATH=$CUBES_PATH
 
 export POSTGRES_PASSWORD=`grep POSTGRES_PASSWORD ~/.bashrc | awk -F "=" '{print $2}'`

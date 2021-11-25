@@ -8,6 +8,10 @@ def generateModelPath()
   "models_directory:" + ENV["MODELS_PATH"].to_s
 end
 
+def generateLogPath()
+  "log : " + ENV["LOGS_PATH"].to_s
+end
+
 def generateCubePath()
   ENV["CUBES_PATH"].to_s
 end
@@ -21,6 +25,9 @@ linesWithCredentials=lines.map { |line|
   elsif line["models_directory"]
     puts "replacing model path"
     generateModelPath
+  elsif line["log :"]
+    puts "replacing log path"
+    generateLogPath
   else
     line
   end
