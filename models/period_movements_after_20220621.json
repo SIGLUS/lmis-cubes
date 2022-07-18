@@ -142,7 +142,7 @@
         }
     ],
     "cubes": [{
-        "name": "vw_period_movements_before_20220121",
+        "name": "vw_period_movements_after_20220621",
         "label": "period movements",
         "dimensions": [
             "facility",
@@ -212,19 +212,19 @@
                 "column": "periodend",
                 "extract": "day"
             },
-            "soh.soh": "vw_period_movements_before_20220121.soh",
-            "cmm.cmm": "vw_period_movements_before_20220121.cmm",
-            "reason_code.reason_code": "vw_period_movements_before_20220121.reason_code",
-            "occurrences.occurrences": "vw_period_movements_before_20220121.occurrences",
-            "total_quantity.total_quantity": "vw_period_movements_before_20220121.total_quantity",
-            "facility.facility_name": "vw_period_movements_before_20220121.facility_name",
-            "facility.facility_code": "vw_period_movements_before_20220121.facility_code",
-            "drug.drug_name": "vw_period_movements_before_20220121.drug_name",
-            "drug.drug_code": "vw_period_movements_before_20220121.drug_code",
-            "location.district_name": "vw_period_movements_before_20220121.district_name",
-            "location.district_code": "vw_period_movements_before_20220121.district_code",
-            "location.province_name": "vw_period_movements_before_20220121.province_name",
-            "location.province_code": "vw_period_movements_before_20220121.province_code"
+            "soh.soh": "vw_period_movements_after_20220621.soh",
+            "cmm.cmm": "vw_period_movements_after_20220621.cmm",
+            "reason_code.reason_code": "vw_period_movements_after_20220621.reason_code",
+            "occurrences.occurrences": "vw_period_movements_after_20220621.occurrences",
+            "total_quantity.total_quantity": "vw_period_movements_after_20220621.total_quantity",
+            "facility.facility_name": "vw_period_movements_after_20220621.facility_name",
+            "facility.facility_code": "vw_period_movements_after_20220621.facility_code",
+            "drug.drug_name": "vw_period_movements_after_20220621.drug_name",
+            "drug.drug_code": "vw_period_movements_after_20220621.drug_code",
+            "location.district_name": "vw_period_movements_after_20220621.district_name",
+            "location.district_code": "vw_period_movements_after_20220621.district_code",
+            "location.province_name": "vw_period_movements_after_20220621.province_name",
+            "location.province_code": "vw_period_movements_after_20220621.province_code"
         }
     }]
 }
