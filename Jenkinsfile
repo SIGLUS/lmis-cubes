@@ -65,7 +65,6 @@ pipeline {
                 }
             }
             steps {
-                runFlyway("${EC2_HOST_PRODUCTION_WEB1}", "${DB_HOST_PRODUCTION}")
                 deploy("${EC2_HOST_PRODUCTION_WEB1}")
                 deploy("${EC2_HOST_PRODUCTION_WEB2}")
             }
