@@ -8,8 +8,7 @@ pipeline {
         string(name: 'DEPLOY_PROD', defaultValue: 'YES')
     }
     environment {
-        EC2_HOST_DEV = "52.69.115.46"
-        EC2_HOST_UAT = "54.65.64.11"
+        EC2_HOST_UAT = "172.31.23.36"
         EC2_HOST_PRODUCTION_WEB1 = "172.31.13.52"
         EC2_HOST_PRODUCTION_WEB2 = "172.31.12.55"
     }
@@ -21,17 +20,9 @@ pipeline {
                 '''
             }
         }
-        stage("Deploy To Dev") {
-            when {
-                branch "master"
-            }
-            steps {
-                deploy("${EC2_HOST_DEV}")
-            }
-        }
         stage("Deploy To UAT") {
             when {
-                branch "release"
+                branch "master"
             }
             steps {
                 deploy("${EC2_HOST_UAT}")
@@ -74,11 +65,10 @@ pipeline {
 
 def deploy(ec2_host) {
     withEnv(["EC2_HOST=${ec2_host}"]) {
-        sshagent(["uat-ssh-key"]) {
-            sh '''
-                echo "deploy cube service"
-                scp cubes.zip ubuntu@${EC2_HOST}:~/artifacts/
-                ssh -tt -o StrictHostKeyChecking=no ubuntu@${EC2_HOST} << EOF
+        sh '''
+            echo "deploy cube service"
+            scp cubes.zip ubuntu@${EC2_HOST}:~/artifacts/
+            ssh -tt -o StrictHostKeyChecking=no ubuntu@${EC2_HOST} << EOF
 echo "backup last cubes.zip"
 sudo cp /app/cubes/cubes.zip /app/cubes/cubes_backup.zip
 
@@ -101,7 +91,6 @@ exit
 
 ps -ef | grep cube
 exit
-            EOF'''
-        }
+        EOF'''
     }
 }
