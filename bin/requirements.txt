@@ -1,4 +1,4 @@
 psycopg2==2.6.1
-Flask==0.10.1
+Flask==2.3.2
 SQLAlchemy==1.0.9
 cubes==1.0.1
